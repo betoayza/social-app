@@ -4,12 +4,12 @@ import { NavBar } from "../components/pure/NavBar";
 
 export const MainLayout = () => {
   return (
-    <div>
+    <div className={"container"}>
       <NavBar />
       <main className={"container"}>
         <Outlet />
       </main>
-      <footer className="fixed-bottom" style={{ color: "white" }}>
+      <footer className="fixed-bottom text-center" style={{ color: "black" }}>
         @ 2023 betoayza | Copyright
       </footer>
     </div>
