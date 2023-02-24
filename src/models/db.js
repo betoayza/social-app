@@ -1,4 +1,4 @@
-import moment from "import";
+import moment from "moment";
 
 let users = [
   {
@@ -45,52 +45,52 @@ let users = [
   },
 ];
 
-
 let posts = [
-    {
-        id: Date.now(),
-        username: "pepe",
-        contain: "This is a nice day",
-        reactions: [],
-        comments:[]
-    },
-    {
-        id: Date.now(),
-        username: "sifu2",
-        contain: "This is a bad day",
-        reactions: [],
-        comments:[]
-    },
-    {
-        id: Date.now(),
-        username: "pipo1",
-        contain: "This is a not a day",
-        reactions: [],
-        comments:[]
-    }, 
-]
+  {
+    id: 1,
+    username: "pepe",
+    message: "This is a nice day",
+    reactions: [],
+    comments: [],
+    date: moment("2021-05-12").format('YYYY-MM-DD'),
+  },
+  {
+    id: 2,
+    username: "sifu2",
+    message: "This is a bad day",
+    reactions: [],
+    comments: [],
+    date: moment("2021-07-11").format('YYYY-MM-DD'),
+  },
+  {
+    id: 3,
+    username: "pipo1",
+    message: "This is a not a day",
+    reactions: [],
+    comments: [],
+    date: moment("2020-03-10").format('YYYY-MM-DD'),
+  },
+];
 
 let comments = [
-    {
-        id: Date.now(),
-        username: "pepe",
-        date: moment("2019-02-01"),
-        responses: []
-    },
-    {
-        id: Date.now(),
-        username: "sifu1",
-        date: moment("2020-12-03"),
-        responses: []
-    },
-    {
-        id: Date.now(),
-        username: "pipo1",
-        date: moment("2021-06-05"),
-        responses: []
-    },
-]
-
-
+  {
+    id: Date.now(),
+    username: "pepe",
+    date: moment("2019-02-01"),
+    responses: [],
+  },
+  {
+    id: Date.now(),
+    username: "sifu1",
+    date: moment("2020-12-03"),
+    responses: [],
+  },
+  {
+    id: Date.now(),
+    username: "pipo1",
+    date: moment("2021-06-05"),
+    responses: [],
+  },
+];
 
 export { users, posts, comments };
