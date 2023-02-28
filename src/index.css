@@ -1,7 +1,11 @@
 body {
-  background-color: cadetblue;
+  background-color: #e7feff;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+.post {
+  background-color: white;
 }

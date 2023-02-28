@@ -4,8 +4,10 @@ import { NavBar } from "../components/pure/NavBar";
 
 export const MainLayout = () => {
   return (
-    <div className={"container"}>
-      <NavBar />
+    <div className={""}>
+      <div className={""}>
+        <NavBar />
+      </div>
       <main className={"container"}>
         <Outlet />
       </main>

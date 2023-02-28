@@ -4,7 +4,7 @@ import { Post } from "../pure/Post";
 
 export const ListPosts = () => {
   return (
-    <div>
+    <div className={"border"} style={{display: "grid", placeItems: "center"}}>
       {posts.map((post) => {
         return <Post key={post.id} post={post} />;
       })}

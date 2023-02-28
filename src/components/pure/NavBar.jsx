@@ -15,22 +15,21 @@ export const NavBar = () => {
     <nav className={"navbar navbar-expand-lg navbar-dark bg-dark"}>
       <div className={"container-fluid"}>
         <a href="#">
-          <span style={{ color: "red" }}>Social App</span>{" "}
+          <span style={{ color: "yellowGreen", fontWeight: "bold" }}>Social App</span>{" "}
         </a>{" "}
         {/* Puedo poner entre a's una imagen-logo */}
-        
         <form className={"d-flex"}>
           <input
             type={"search"}
             className={"form-control me-2"}
             placeholder="Search..."
             arial-label={"Search"}
+            style={{ fontStyle: "italic", color: "gray" }}
           />
           <button className={"btn btn-outline-primary"} type={"submit"}>
             Search
           </button>
         </form>
-        
         <button
           className={"navbar-toggler"}
           type="button"
@@ -42,7 +41,6 @@ export const NavBar = () => {
         >
           <span className={"navbar-toggler-icon"}></span>
         </button>
-        
         <div className={"collapse navbar-collapse"} id="navbarSupportedContent">
           <ul className={"navbar-nav mb-2 mb-lg-0 text-center"}>
             <li className={"nav-item"}>
@@ -70,7 +68,46 @@ export const NavBar = () => {
               >
                 Home
               </NavLink>
-            </li>            
+            </li>
+            <li>
+              <NavLink
+                to="groups"
+                className={
+                  // ({ isActive }) =>
+                  // isActive ? activeClassName : undefined
+                  "nav-link"
+                }
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              >
+                Groups
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="histories"
+                className={
+                  // ({ isActive }) =>
+                  // isActive ? activeClassName : undefined
+                  "nav-link"
+                }
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              >
+                Histories
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="settings"
+                className={
+                  // ({ isActive }) =>
+                  // isActive ? activeClassName : undefined
+                  "nav-link"
+                }
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              >
+                Settings
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

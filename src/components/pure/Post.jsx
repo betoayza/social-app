@@ -4,34 +4,41 @@ import { Reaction } from "./Reaction";
 
 export const Post = ({ post }) => {
   return (
-    <div className={"border text-center rounded m-3"}>
+    <div className={"border border-2 text-center rounded rounded-3 m-3 p-3 post"}>
       <p>
         Posted by <a href="#">@{post.username}</a> at {post.date}
       </p>
       {/* <img src="" alt="Image" /> */}
       <p>"{post.message}"</p>
       <div
-        className={"text-center border"}
+        className={"text-center"}
         style={{ display: "flex", justifyContent: "center" }}
       >
-        <button className={"btn btn-light"}>Like it</button>
-        <button className={"btn btn-light"}>Dont Like</button>
-        <button className={"btn btn-light"}>Share</button>
+        <button className={"btn btn-outline-success"}>Like it</button>
+        <button className={"btn btn-outline-danger"}>Dont Like</button>
+        <button className={"btn btn-outline-primary"}>Share</button>
       </div>
-      <div>
-        <p>Emotions:</p>
+      <div className="d-flex m-1 justify-content-center">
         {post.reactions.map((reaction) => {
-          return <Reaction reaction={reaction} />;
+          return <Reaction key={reaction.id} reaction={reaction} />;
         })}
       </div>
       <div
-        className={"border text-center"}
+        className={"text-center container"}
         style={{ display: "grid", justifyContent: "center" }}
       >
-        <p>Comments</p>
-        <input type="text" className={"form-control form-row"} />
+        <input
+          type="text"
+          className={"form-control form-row mb-2"}
+          placeholder={"Comment..."}
+          style={{ fontStyle: "italic" }}
+        />
         {post.comments.map((comment) => {
-          return comment ? <Comment /> : <p>No comments :(</p>;
+          return comment ? (
+            <Comment key={comment.id} comment={comment} />
+          ) : (
+            <p>No comments :(</p>
+          );
         })}
       </div>
     </div>
