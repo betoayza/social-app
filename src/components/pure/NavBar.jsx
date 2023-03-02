@@ -15,7 +15,9 @@ export const NavBar = () => {
     <nav className={"navbar navbar-expand-lg navbar-dark bg-dark"}>
       <div className={"container-fluid"}>
         <a href="#">
-          <span style={{ color: "yellowGreen", fontWeight: "bold" }}>Social App</span>{" "}
+          <span style={{ color: "yellowGreen", fontWeight: "bold" }}>
+            Social App
+          </span>{" "}
         </a>{" "}
         {/* Puedo poner entre a's una imagen-logo */}
         <form className={"d-flex"}>
@@ -43,6 +45,19 @@ export const NavBar = () => {
         </button>
         <div className={"collapse navbar-collapse"} id="navbarSupportedContent">
           <ul className={"navbar-nav mb-2 mb-lg-0 text-center"}>
+            <li>
+              <NavLink
+                to="/"
+                className={
+                  // ({ isActive }) =>
+                  // isActive ? activeClassName : undefined
+                  "nav-link"
+                }
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              >
+                Home
+              </NavLink>
+            </li>
             <li className={"nav-item"}>
               <NavLink
                 to="profile"
@@ -56,9 +71,10 @@ export const NavBar = () => {
                 Profile
               </NavLink>
             </li>
+
             <li>
               <NavLink
-                to="home"
+                to="friends"
                 className={
                   // ({ isActive }) =>
                   // isActive ? activeClassName : undefined
@@ -66,10 +82,24 @@ export const NavBar = () => {
                 }
                 style={({ isActive }) => (isActive ? activeStyle : undefined)}
               >
-                Home
+                Friends
               </NavLink>
             </li>
             <li>
+              <NavLink
+                to="contact"
+                className={
+                  // ({ isActive }) =>
+                  // isActive ? activeClassName : undefined
+                  "nav-link"
+                }
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              >
+                Support
+              </NavLink>
+            </li>
+
+            {/* <li>
               <NavLink
                 to="groups"
                 className={
@@ -107,7 +137,7 @@ export const NavBar = () => {
               >
                 Settings
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

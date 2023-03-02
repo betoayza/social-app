@@ -12,13 +12,17 @@ export const router = createBrowserRouter([
         element: <Components.Home />,
       },
       {
+        path: "profile",
+        element: <Components.Profile />,
+      },
+      {
         path: "contact",
         element: <Components.Contact />,
       },
-      {
-        path: "about",
-        element: <Components.About />,
-      },
+      // {
+      //   path: "about",
+      //   element: <Components.About />,
+      // },
     ],
   },
 ]);

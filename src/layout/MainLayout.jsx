@@ -8,7 +8,7 @@ export const MainLayout = () => {
       <div className={""}>
         <NavBar />
       </div>
-      <main className={"container"}>
+      <main className={"container"} style={{ marginBottom: "50px" }}>
         <Outlet />
       </main>
       <footer className="fixed-bottom text-center" style={{ color: "black" }}>

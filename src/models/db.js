@@ -14,6 +14,10 @@ let users = [
     friends: [],
     groups: [],
     messages: [],
+    biography: "I'm a software developer",
+    registrationDate: moment("2017-08-24").format("YYYY-MM-DD"),
+    following: 24,
+    followers: 135,
   },
   {
     id: 2,
@@ -28,6 +32,10 @@ let users = [
     friends: [],
     groups: [],
     messages: [],
+    biography: "I'm a student",
+    registrationDate: moment("2019-07-14").format("YYYY-MM-DD"),
+    following: 267,
+    followers: 123,
   },
   {
     id: 3,
@@ -42,6 +50,10 @@ let users = [
     friends: [],
     groups: [],
     messages: [],
+    biography: "I'm somebody",
+    registrationDate: moment("2018-11-16").format("YYYY-MM-DD"),
+    following: 123,
+    followers: 0,
   },
 ];
 
@@ -69,6 +81,7 @@ let posts = [
     reactions: [
       { id: 1, emoji: ":D", username: "pepe" },
       { id: 2, emoji: ":'(", username: "sifu2" },
+      { id: 3, emoji: ";)", username: "papo2" },
     ],
     comments: [
       {
@@ -83,6 +96,13 @@ let posts = [
         username: "pepe",
         message: "I'm agree with that",
         date: moment("2019-02-01"),
+        reply: [],
+      },
+      {
+        id: 4,
+        username: "papo2",
+        message: "So cool!",
+        date: moment("2022-05-02"),
         reply: [],
       },
     ],
@@ -110,6 +130,13 @@ let comments = [
     username: "pipo1",
     message: "Great!",
     date: moment("2021-06-05"),
+    reply: [],
+  },
+  {
+    id: 4,
+    username: "papo2",
+    message: "So cool!",
+    date: moment("2022-05-02"),
     reply: [],
   },
 ];
