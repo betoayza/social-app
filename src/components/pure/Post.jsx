@@ -5,7 +5,9 @@ import { Reaction } from "./Reaction";
 export const Post = ({ post }) => {
   return (
     <div
-      className={"border border-2 border-dark text-center rounded rounded-3 m-3 p-3 post"}
+      className={
+        "border border-2 border-dark text-center rounded rounded-3 m-3 p-3 post"
+      }
     >
       <p style={{ color: "gray" }}>
         Posted by <a href="#">@{post.username}</a> at {post.date}
@@ -55,6 +57,12 @@ export const Post = ({ post }) => {
           placeholder={"Comment..."}
           style={{ fontStyle: "italic" }}
         />
+        <div className="mb-2">
+          <button type="button" className={"btn btn-primary"}>
+            Send
+          </button>
+        </div>
+
         {post.comments.map((comment) => {
           return comment ? (
             <Comment key={comment.id} comment={comment} />

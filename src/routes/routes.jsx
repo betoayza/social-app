@@ -19,10 +19,14 @@ export const router = createBrowserRouter([
         path: "contact",
         element: <Components.Contact />,
       },
-      // {
-      //   path: "about",
-      //   element: <Components.About />,
-      // },
+      {
+        path: "about",
+        element: <Components.About />,
+      },
+      {
+        path: "friends",
+        element: <Components.ListFriends />,
+      },
     ],
   },
 ]);

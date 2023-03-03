@@ -87,6 +87,19 @@ export const NavBar = () => {
             </li>
             <li>
               <NavLink
+                to="about"
+                className={
+                  // ({ isActive }) =>
+                  // isActive ? activeClassName : undefined
+                  "nav-link"
+                }
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              >
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="contact"
                 className={
                   // ({ isActive }) =>
